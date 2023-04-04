@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd"
+        logicalFilePath="liquibase">
+
+    <changeSet id="category-for-item" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/01.create_table_category.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+
+    <changeSet id="item-home" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/02.create_table_item.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="liquide-item-category" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/03.create_table_liquide.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="vaporizer-item-category" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/04.create_table_vaporizer.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="vape-item-category" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/05.create_table_vape.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="role-for-users" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/06.create_table_role.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="privileges-for-user" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/07.create_table_privileges.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="relation-role-and-privileges" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/08.create_table_role_privileges.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="user-home" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/09.create_table_users.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="rating-for-item" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/10.create_table_rating.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="order-home" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/11.create_table_orders.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="relation-order-item" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/12.create_table_order_item.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="insert-data-vapeshop" author="Ilya Petushok">
+        <sqlFile encoding="utf8" path="script_sql/13.dml_for_vapeshop.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+<!--    <changeSet id="create_index_for_vapeshop" author="Ilya Petushok">-->
+<!--        <sqlFile encoding="utf8" path="script_sql/14.create_index.sql" relativeToChangelogFile="true"/>-->
+<!--    </changeSet>-->
+
+</databaseChangeLog> 
